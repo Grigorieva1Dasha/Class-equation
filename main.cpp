@@ -18,7 +18,7 @@ ostream& operator <<(ostream& out, const Rational& r)
 int main() {
 	setlocale(LC_ALL, "Russian");
 
-	/*cout << "Ïåðâûé òåñò:" << endl;
+	/*cout << "ÐŸÐµÑ€Ð²Ñ‹Ð¹ Ñ‚ÐµÑÑ‚:" << endl;
 	Rational a(1, 2), b(-1, 6);
 	cout << "a=" << a << " b=" << b << " a+b=" << a + b << endl;
 	cout << "a(" << a << ")*= b(" << b << ")" << endl;
@@ -28,20 +28,20 @@ int main() {
 	Rational c = 3;
 	cout << "b=" << b << " c=" << c << " b/c=" << b / c << endl << endl;
 
-	cout << "Âòîðîé òåñò:" << endl;
+	cout << "Ð’Ñ‚Ð¾Ñ€Ð¾Ð¹ Ñ‚ÐµÑÑ‚:" << endl;
 	Rational e(7, 8), f(5, 12);
 	cout << "e=" << e << " f=" << f << " e+f=?" << endl;
-	cout << "Ââåäèòå ðåçóëüòàò g=m/n â ôîðìàòå: m n" << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚ g=m/n Ð² Ñ„Ð¾Ñ€Ð¼Ð°Ñ‚Ðµ: m n" << endl;
 	Rational g;
 	cin >> g;
 	if (e + f != g)
-		cout << "Íåïðàâèëüíî! e+f=" << e + f << endl;
+		cout << "ÐÐµÐ¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ð¾! e+f=" << e + f << endl;
 	else
-		cout << "Ïðàâèëüíî!" << endl;*/
+		cout << "ÐŸÑ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ð¾!" << endl;*/
 
 	Rational a1,b1,c1,d,x1,x2;
-	cout << "Ðåøåíèå êâàäðàòíîãî óðàâíåíèÿ: " << endl;
-	cout << "Ââåäèòå êîýôèöèåíòû a, b, c (a=m/n, ââåäèòå m n): " << endl;
+	cout << "Ð ÐµÑˆÐµÐ½Ð¸Ðµ ÐºÐ²Ð°Ð´Ñ€Ð°Ñ‚Ð½Ð¾Ð³Ð¾ ÑƒÑ€Ð°Ð²Ð½ÐµÐ½Ð¸Ñ: " << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾ÑÑ„Ð¸Ñ†Ð¸ÐµÐ½Ñ‚Ñ‹ a, b, c (a=m/n, Ð²Ð²ÐµÐ´Ð¸Ñ‚Ðµ m n): " << endl;
 	cout << "a= ";
 	cin >> a1;
 	cout << "b= ";
@@ -50,17 +50,17 @@ int main() {
 	cin >> c1;
 	cout << "("<< a1 << ")x^2 + (" << b1 << ")x + (" << c1 << ") = 0" << endl;
 	if (a1==Rational(0)){
-		cout << "Ýòî íå êâàäðàòíîå óðàâíåíèå!" << endl;
+		cout << "Ð­Ñ‚Ð¾ Ð½Ðµ ÐºÐ²Ð°Ð´Ñ€Ð°Ñ‚Ð½Ð¾Ðµ ÑƒÑ€Ð°Ð²Ð½ÐµÐ½Ð¸Ðµ!" << endl;
 		system("pause");
 		return 0;
 	}
 	Rational q = 4;
 	d = b1 * b1 - q * a1 * c1;
-	cout << "Äèñêðèìèíàíò = " << d << endl;
+	cout << "Ð”Ð¸ÑÐºÑ€Ð¸Ð¼Ð¸Ð½Ð°Ð½Ñ‚ = " << d << endl;
 	Rational null = 0;
 	Rational w = 2;
 	if (d < null){
-		cout << "Äèñêðèìèíàíò < 0, íåò ðåøåíèé!" << endl;
+		cout << "Ð”Ð¸ÑÐºÑ€Ð¸Ð¼Ð¸Ð½Ð°Ð½Ñ‚ < 0, Ð½ÐµÑ‚ Ñ€ÐµÑˆÐµÐ½Ð¸Ð¹!" << endl;
 		system("pause");
 		return 0;
 	}
