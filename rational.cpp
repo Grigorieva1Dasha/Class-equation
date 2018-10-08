@@ -23,15 +23,12 @@ Rational& Rational::operator +=(const Rational& r)
 {
 	numer = (numer*r.denom + denom * r.numer);
 	denom *= r.denom;
-	simplify(); // упрощение
+	simplify(); // ГіГЇГ°Г®Г№ГҐГ­ГЁГҐ
 	return *this;
 }
 Rational Rational::operator +(const Rational &r) const
 {
-	// this - указатель на себя
-	// *this - ссылка на себя
 	Rational res(*this);
-	// Используем готовую операцию добавления
 	return res += r;
 }
 void Rational::simplify()
