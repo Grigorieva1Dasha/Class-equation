@@ -18,11 +18,15 @@ public:
 	Rational& operator /(const Rational& r); 
 	Rational operator *(const Rational& r) const;
 	Rational sqr();
-	bool operator ==(const Rational& r) const; 
+	bool operator ==(const Rational& r) const;
 	bool operator !=(const Rational& r) const;
 	bool operator <(Rational& r);
+	bool operator <(const int& r);
+	bool operator ==(const int& r) const;
 	operator int() const; 
 	operator double() const; 
-	/*friend istream& operator >>(istream& in, Rational& r); //Îïåðàòîð ââîäà
-	friend ostream& operator <<(ostream& out, const Rational& r); //Îïåðàòîð âûâîäà*/
+	Rational operator *(const int& a);
+	Rational& operator /(const int& a);
+	/*friend istream& operator >>(istream& in, Rational& r); 
+	friend ostream& operator <<(ostream& out, const Rational& r); 
 };
