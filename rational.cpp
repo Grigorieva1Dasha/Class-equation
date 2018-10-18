@@ -23,7 +23,7 @@ Rational& Rational::operator +=(const Rational& r)
 {
 	numer = (numer*r.denom + denom * r.numer);
 	denom *= r.denom;
-	simplify(); // óïðîùåíèå
+	simplify(); 
 	return *this;
 }
 Rational Rational::operator +(const Rational &r) const
@@ -83,6 +83,23 @@ bool Rational::operator <(Rational& r){
 	}
 	return (numer < r.numer);
 }
+bool Rational::operator <(const int& r) {
+	Rational r1(r);
+	if (denom != r1.denom) {
+		numer *= r1.denom;
+		r1.numer *= denom;
+		denom = denom * r1.denom;
+		r1.denom = denom;
+	}
+	return (numer < r1.numer);
+}
+bool Rational::operator ==(const int& r) const
+{
+	Rational res(*this), r1(r);
+	r1.denom *= res.denom;
+	r1.numer *= res.denom;
+	return (res == r1);
+}
 Rational::operator int() const
 {
 	return numer / denom;
@@ -114,6 +131,20 @@ Rational Rational::sqr(){
 	int num = round(sqrt(double(r.numer)));
 	int den = round(sqrt(double(r.denom)));
 	return Rational(num, den);
+}
+Rational Rational::operator *(const int& a)
+{
+	Rational res(*this);
+	res.numer *= a;
+	simplify();
+	return res;
+}
+Rational& Rational::operator /(const int& a)
+{
+	Rational res(*this);
+	res.denom *= a;
+	simplify();
+	return res;
 }
 /*istream& operator >>(istream& in, Rational& r)
 {
