@@ -54,26 +54,26 @@ int main() {
 		system("pause");
 		return 0;
 	}
-	Rational q = 4;
-	d = b1 * b1 - q * a1 * c1;
+	//Rational q = 4;
+	d = b1 * b1 - (a1 * 4) * c1;
 	cout << "Дискриминант = " << d << endl;
-	Rational null = 0;
-	Rational w = 2;
-	if (d < null){
+	//Rational null = 0;
+	//Rational w = 2;
+	if (d < 0){
 		cout << "Дискриминант < 0, нет решений!" << endl;
 		system("pause");
 		return 0;
 	}
-	else if(d == null){
-		x1 = (-b1)/ w / a1;
+	else if(d == 0){
+		x1 = (-b1)/ (a1 * 2);
 		cout << "x1 = x2 = " << x1 << endl;
 		system("pause");
 		return 0;
 	}
 	else{
 		double d2 = d.sqr();
-		x1 = (-b1 + Rational(d2)) / w / a1;
-		x2 = (-b1 - Rational(d2)) / w / a1;
+		x1 = (-b1 + Rational(d2)) / (a1 * 2);
+		x2 = (-b1 - Rational(d2)) / (a1 * 2);
 		cout << "x1 = " << x1 << endl;
 		cout << "x2 = " << x2 << endl;
 	}
